@@ -1,0 +1,14 @@
+extends layout.pug
+
+block content
+    h2.text-dark.text-center.m-4.font-weight-bold User !{user.id}
+    .u.border.border-secondary
+        .number
+            h4.number !{user.firstname} !{user.lastname}
+        .info.bg-light
+            h5 Firstname: <span>!{user.firstname} </span>
+            h5 Lastname: <span>!{user.lastname}</span>
+            h5 Email:  <span>!{user.email} </span>
+                h5 Password: <span>!{user.password} </span> 
+    
+        

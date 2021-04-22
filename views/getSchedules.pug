@@ -1,0 +1,26 @@
+extends layout.pug
+
+block content
+    - var name = ""
+    h2.text-dark.text-center.m-4.font-weight-bold Schedules
+    h5.occur  The search returned !{schedules.length} occurrences in the system
+    each schedule,j in schedules
+        each user,i in users
+            if (parseInt(schedule.user_id) == parseInt(i))
+                - name = user.firstname +" "+ user.lastname;   
+        .u.border.border-secondary
+            .number
+                h5.text-white !{j+1} - Schedule
+            .info.bg-light
+                h5 Name: 
+                    span
+                        a(class="text-dark" href="/users/" + (schedule.user_id) ) !{name}
+                   
+                    
+                h5 User ID: <span>!{schedule.user_id} </span>
+                h5 Day: <span>!{schedule.day}</span>
+                h5 Starting time:  <span>!{schedule.start_at} </span>
+                h5 Ending time: <span>!{schedule.end_at} </span> 
+
+    
+        

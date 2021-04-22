@@ -1,0 +1,17 @@
+extends layout.pug
+
+block content
+    h2.text-dark.text-center.mt-5.font-weight-bold Schedule for User 
+    h2.text-dark.text-center.font-weight-normal.m-0 !{user.firstname} !{user.lastname}
+    h6.text-dark.text-center.font-weight-normal.m-0 User ID - !{schedules[0].user_id}
+    h5.occur  The search returned !{schedules.length} occurrences in the system
+    each schedule,i in schedules
+        .u.border.border-secondary
+            .number
+                h5.text-white Schedule - !{(i+1)}
+            .info.bg-light
+                h5 Day: <span>!{schedule.day}</span>
+                h5 Starting time:  <span>!{schedule.start_at} </span>
+                h5 Ending time: <span>!{schedule.end_at} </span> 
+    
+        

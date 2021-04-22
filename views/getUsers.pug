@@ -1,0 +1,16 @@
+extends layout.pug
+
+block content
+    h2.text-dark.text-center.m-4.font-weight-bold Users
+    h5.occur  The search returned !{users.length} occurrence(s) in the system
+    each user,i in users
+        .u.border.border-secondary 
+            .number
+                a(class="text-white" href="/users/" + (i) + "/schedules")  !{(i+1)} - !{user.firstname} !{user.lastname} 
+            .info.bg-light
+                h5 Firstname: <span>!{user.firstname} </span>
+                h5 Lastname: <span>!{user.lastname}</span>
+                h5 Email:  <span>!{user.email} </span>
+                h5 Password: <span>!{user.password} </span> 
+    
+        

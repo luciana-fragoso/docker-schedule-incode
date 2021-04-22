@@ -1,0 +1,33 @@
+extends layout.pug
+
+block content
+    h2.text-dark.text-center.m-4.font-weight-bold Adding a Schedule
+    form(method="POST" action="../schedules")
+        .add.bg-light.border.border-secondary 
+            .form
+                div
+                    label(for="user_id") User ID
+                select(id="user_id" name="user_id")
+                    each user,i in users
+                        option(value=i) !{i} -  !{user.firstname} !{user.lastname}
+            .form 
+                div
+                    label(for="day") Day
+                select(id="day" name="day")
+                    option(value="Monday") Monday
+                    option(value="Tuesday") Tuesday
+                    option(value="Wednesday") Wednesday 
+                    option(value="Thursday") Thursday 
+                    option(value="Friday") Friday
+                    option(value="Saturday") Saturday 
+                    option(value="Sunday") Sunday
+            .form
+                div
+                    label(for="start_at") Starting time
+                input(type="time" name="start_at" id="start_at" required) 
+            .form   
+                div 
+                    label(for="end_at") Ending time
+                input(type="time" name="end_at" id="end_at" required)
+            .d-flex.justify-content-center 
+                button.btn.btn-secondary.justify-content-center.w-25.mb-4(type="submit") Send

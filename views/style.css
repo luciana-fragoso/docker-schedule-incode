@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+.header {
+    text-align: center;
+    color: #FFFFFF;
+}
+h2.sub-title {
+    margin: 2% 0px 2% 0px;
+    color: #4984CC;
+    text-align: center;
+}
+.occur {
+   margin: 2% 2% 0px 2%;
+   text-align: center;
+   font-weight: normal;
+}
+div.number{
+    background-color: #4A4A4A;
+    padding: 1%;
+}
+h4.number {
+    text-align: left;
+    margin: 0px;
+    color: #FFFFFF;
+}
+h5 {
+    margin: 0px;
+    font-weight: bold;
+    color: #343A40;
+    font-size: 14px;
+}
+
+span {
+    font-weight: normal;
+    color: #343A40;
+    font-size: 14px;
+}
+div.u {
+    background-color:#D5E5ED;
+    margin:2% 10% 2% 10%;
+    border: 1px solid #659DBD;
+    word-wrap: break-word;
+    display: block;
+}
+div.u:hover{
+    background-color: lightsteelblue;
+}
+a:hover,a,a:focus,a:after {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+div.add {
+    width: 80%;
+    padding-top: 1%;
+    background-color:#D5E5ED;
+    margin: auto;
+    border: 1px solid #659DBD;
+    word-wrap: break-word
+}
+div.info{
+    padding: 1%;
+}
+
+.form { 
+    margin: 2% 5% 2% 5%; 
+    display: block;
+ 
+}
+
+
+input,select{
+    width: 98%;
+    margin-right: 2%;
+    height: 30px;
+}
+.form-button {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #000000;
+    background-color: lightgray;
+}

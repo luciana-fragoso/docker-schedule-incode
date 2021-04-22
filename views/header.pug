@@ -1,0 +1,18 @@
+header
+    
+ nav.navbar.navbar-expand-md.bg-dark.navbar-dark
+        a.navbar-brand.nav-text.font-weight-bold(href='/') Schedule Website
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#my-nav')
+            span.navbar-toggler-icon
+        #my-nav.collapse.navbar-collapse
+            ul.nav.navbar-nav.ml-auto.pr-5
+                li.nav-item.dropdown
+                    a#dropdownUser.nav-link.dropdown-toggle.text-white(href='#', data-toggle='dropdown')  Users 
+                    .dropdown-menu(aria-labelledby='dropdownUser')
+                        a.dropdown-item(href='/users/new') New
+                        a.dropdown-item(href='/users') List all
+                li.nav-item.dropdown
+                    a#dropdownSchedule.nav-link.dropdown-toggle.text-white(href='#', data-toggle='dropdown')  Schedules 
+                    .dropdown-menu(aria-labelledby='dropdownSchedule')
+                        a.dropdown-item(href='/schedules/new') New
+                        a.dropdown-item(href='/schedules') List all

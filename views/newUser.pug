@@ -1,0 +1,24 @@
+extends layout.pug
+
+block content
+    h2.text-dark.text-center.m-4.font-weight-bold Adding a User
+    form(method="POST" action="../users/new")
+        .add.bg-light.border.border-secondary 
+            .form
+                div
+                    label(for="firstname") Firstname
+                input(type="text" name="firstname" id="firstname" required) 
+            .form
+                div
+                    label(for="lastname") Lastname
+                input(type="text" name="lastname" id="lastname" required) 
+            .form
+                div
+                    label(for="email") Email
+                input(type="email" name="email" id="email" required) 
+            .form   
+                div 
+                    label(for="password") Password
+                input(type="password" name="password" id="password" required)
+            .d-flex.justify-content-center
+                button.btn.btn-secondary.justify-content-center.w-25.mb-4(type="submit") OK
